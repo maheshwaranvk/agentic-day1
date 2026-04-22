@@ -6,11 +6,10 @@ load_dotenv()
 
 llm = ChatOpenAI(model="gpt-4.1-nano",api_key=os.getenv("OPENAI_API_KEY"))
 
-# resp1 = llm.invoke("We are building an AI system for processing medical insurance claims.")
-# print(resp1.content)
-# print("-------------------------------------------------")
-# resp2 = llm.invoke("What are the main risks in this system?")
-# print(resp2.content)
+resp1 = llm.invoke("We are building an AI system for processing medical insurance claims.")
+print(resp1.content)
+resp2 = llm.invoke("What are the main risks in this system?")
+print(resp2.content)
 
 """
 Why the second question may fail or behave inconsistently without conversation history.
